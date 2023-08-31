@@ -28,6 +28,9 @@ import { PageLayoutComponent }       from './components/layouts/page-layout/page
 
 // Directives
 import { ModalWrapperDirective }     from './directives/modal-wrapper.directive';
+import { MatButtonModule, MatIconButton } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -43,6 +46,9 @@ import { ModalWrapperDirective }     from './directives/modal-wrapper.directive'
     TranslateModule,
     AngularSvgIconModule,
     NgbModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatButtonModule
   ],
   declarations    :
   [

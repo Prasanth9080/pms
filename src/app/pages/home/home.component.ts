@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit
 {
   public isLoading : boolean = true;
 
+  nav:any
   constructor
   (
   ) { }

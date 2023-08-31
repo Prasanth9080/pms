@@ -9,7 +9,6 @@ import { ForgotPasswordComponent }  from './auth/forgot-password/forgot-password
 import { LoginComponent }           from './auth/login/login.component';
 import { ValidateAccountComponent } from './auth/validate-account/validate-account.component';
 
-
 const routes : Routes = [
   {
     path      : '',
@@ -49,4 +48,5 @@ const routes : Routes = [
   [
   ]
 })
+
 export class AuthRoutingModule { }

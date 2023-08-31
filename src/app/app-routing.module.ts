@@ -15,7 +15,7 @@ const routes : Routes = [
     path         : 'home',
     loadChildren : () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
-  { path : 'home',   redirectTo : '/dashboard', pathMatch : 'full' },
+  { path : '',   redirectTo : '/home', pathMatch : 'full' },
   { path : '**', component : NotFoundComponent }
 ];
 

@@ -8,6 +8,7 @@ import { HomeRoutingModule } from './home-routing.module';
 
 // Components
 import { HomeComponent }     from './home.component';
+import { Injectable } from '@angular/core';
 
 
 @NgModule({

@@ -17,6 +17,7 @@ import { StoreService } from '@services/store.service';
   templateUrl : './login.component.html',
   styleUrls   : ['./login.component.scss']
 })
+
 export class LoginComponent
 {
   public appName : string = environment.appName;
@@ -30,10 +31,12 @@ export class LoginComponent
     private router       : Router,
     private storeService : StoreService,
     private appService   : AppService,
+  
   )
   {
     this.initFormGroup();
   }
+  
 
   // -------------------------------------------------------------------------------
   // NOTE Init ---------------------------------------------------------------------
