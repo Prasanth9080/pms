@@ -18,6 +18,7 @@ import { HomeComponent }     from './home.component';
         CommonModule,
         HomeRoutingModule,
         SharedModule,
+
     
     ]
 })

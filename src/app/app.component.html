@@ -1,9 +1,106 @@
-<div class="scrollable-container">
-  <div class="layout">
 
-    <router-outlet></router-outlet>
+          
+<mat-sidenav-container class="sidenav-wrapper">
+  
+  <mat-sidenav #nav opened mode="side" >
 
-  </div>
+    <div style="display: flex;">
+      <div>
+        <img src="/assets/img/Logo Bust 2.png" style="height: 50px;width: 50px;">
+      </div>
+      <div class="NRP">
+        <h6 class="project"><b style="color: black;">NRP PROJECTS</b></h6>
+        <P style="font-size: 9px;padding-top: 0px;">Project Monitoring System</P>
+      </div>
+      <div>
+        <button mat-icon-button (click)="nav.toggle()"><mat-icon>close</mat-icon></button>
+      </div>
+    </div>
+
+    <a [routerLink]="['dashboard']">
+      <button mat-button style="margin-top: 20px;">
+          <img src="/assets/img/box.png" style="margin-right: 5px;">
+          <span>Dashboard</span>
+      </button>
+    </a>
+  
+<div class="projectreq">
+    <ul style="padding-left: 0px;margin-bottom: 0px;">
+      <button mat-button style="margin-top: 20px;" [routerLink]="['project-req']">
+        <img src="/assets/img/database.png" style="margin-right: 5px;">
+        <span>Project Requirements</span>
+        <img src="/assets/img/Vector.png" style="margin-left: 10px;">
+      </button>
+      <ul id="list">
+      <p style="color:rgba(200, 143, 4, 1);font-size: 15px;">Project Requirements</p>
+      <a [routerLink]="['consumables']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Consumables</b></a> 
+      <a [routerLink]="['Machinery']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Machinery</b></a> 
+      <a [routerLink]="['man-power']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Man Power</b></a> 
+      <a [routerLink]="['tools-tackles']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Tools & Tackles</b></a> 
+      <a [routerLink]="['instruments']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Instruments</b></a> 
+      <a [routerLink]="['safety-tools']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Safety Tools</b></a> 
+      </ul>
+    </ul>
 </div>
+
+
+
+  <a [routerLink]="['daily-data']">
+    <button mat-button style="margin-top: 20px;">
+        <img src="/assets/img/layers.png" style="margin-right: 5px;">
+        <span>Daily Operational Data</span>
+    </button>
+  </a>
+
+  <a [routerLink]="['reports']">
+    <button mat-button style="margin-top: 20px;">
+        <img src="/assets/img/file-text.png" style="margin-right: 5px;">
+        <span>Reports</span>
+        <img src="/assets/img/Vector.png" style="margin-left: 10px;margin-right: 10px;">
+    </button>
+  </a>
+
+  <div style="margin-bottom: 100%;"></div>
+
+  <div class="projectreq">
+    <ul style="padding-left: 0px;margin-bottom: 0px;">
+      <button mat-button style="margin-top: 10px;" [routerLink]="['settings']">
+        <img src="/assets/img/settings.png" style="margin-right: 5px;">
+        <span>Settings</span>
+        <img src="/assets/img/Vector.png" style="margin-left: 10px;">
+      </button>
+      <ul id="list">
+      <a [routerLink]="['project-master']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Project Master</b></a> 
+      <a [routerLink]="['Project-code']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Project Code</b></a> 
+      <a [routerLink]="['Project-team']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Project Team</b></a> 
+      <a [routerLink]="['Project-Access']" style="font-size: 15px;margin-top: 20px;margin-bottom: 10px;"><b>Project Access</b></a> 
+      </ul>
+    </ul>
+</div>
+
+  <div style="display: flex;padding-top: 10%;">
+    <img src="/assets/img/Logo Bust 2.png" style="width: 40%;height: 70px;padding-right: 0px;">
+    <h1 style="color: gray; padding-right: 10px;padding-top: 13px;font-size: 30px;"><b>nrp</b></h1>
+    <div>
+    <h3 style="padding-top: 22px;font-size: 22px;padding-bottom: 10px;">PROJECTS</h3>
+    <h3 style="font-size: 12px;padding-top: 10px;height: 2px;">PRIVATE LIMITED</h3>
+    </div>
+    </div>
+
+
+  </mat-sidenav>
+   
+  <div>
+    <div class="col">
+    <div  class="pe-0 text-center" style="width: 4%;height: 5%;">
+      <button mat-icon-button (click)="nav.toggle()" style="padding-top: 0px;height: 10px;"><mat-icon>menu</mat-icon></button>
+    </div>
+    </div>
+    <div class="ps-0" style="width: 96%;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</mat-sidenav-container>
 
 <app-toast aria-live="polite" aria-atomic="true"></app-toast>
