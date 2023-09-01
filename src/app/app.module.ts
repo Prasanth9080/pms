@@ -7,6 +7,9 @@ import { Injector }             from '@angular/core';
 import { BrowserModule }        from '@angular/platform-browser';
 import { DatePipe }             from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 // External modules
 import { TranslateService }     from '@ngx-translate/core';
@@ -29,6 +32,8 @@ import { AppComponent }         from './app.component';
 
 // Factories
 import { appInitFactory }       from '@factories/app-init.factory';
+import { RouterModule } from '@angular/router';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -37,7 +42,10 @@ import { appInitFactory }       from '@factories/app-init.factory';
     HttpClientModule,
     BrowserAnimationsModule,
     BrowserModule,
-
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    RouterModule,
     // External modules
     TranslateModule.forRoot({
       loader :
@@ -57,6 +65,7 @@ import { appInitFactory }       from '@factories/app-init.factory';
   ],
   declarations: [
     AppComponent,
+    DashboardComponent,
   ],
   providers: [
     // External modules
