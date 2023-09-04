@@ -5,6 +5,8 @@ import { RouterModule }      from '@angular/router';
 
 // Components
 import { NotFoundComponent } from './static/not-found/not-found.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ProjectMasterComponent } from './settings/project-master/project-master.component';
 
 const routes : Routes = [
   {
@@ -14,6 +16,14 @@ const routes : Routes = [
   {
     path         : 'home',
     loadChildren : () => import('./pages/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path : 'dashboard',
+    component : DashboardComponent
+  },
+  {
+    path : 'project-master',
+    component : ProjectMasterComponent
   },
   { path : '',   redirectTo : '/home', pathMatch : 'full' },
   { path : '**', component : NotFoundComponent }
